@@ -33,6 +33,8 @@ android {
 }
 
 dependencies {
+    implementation libs.gson
+
     implementation libs.drawerlayout
     implementation libs.navigation.fragment
     implementation libs.navigation.ui
