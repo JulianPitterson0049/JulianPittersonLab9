@@ -3,8 +3,11 @@ package julian.pitterson.n01680049.jp;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -103,6 +106,29 @@ public class PittersonActivity9 extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        boolean isNight = AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES;
+
+        MenuItem toggleItem = menu.findItem(R.id.julToggleMode);
+        MenuItem searchItem = menu.findItem(R.id.julSearch);
+
+        int textColour = isNight ? Color.WHITE : Color.BLACK;
+
+        if (toggleItem != null) {
+            SpannableString s = new SpannableString(toggleItem.getTitle());
+            s.setSpan(new ForegroundColorSpan(textColour), 0, s.length(), 0);
+            toggleItem.setTitle(s);
+        }
+
+        if (searchItem != null) {
+            SpannableString s = new SpannableString(searchItem.getTitle());
+            s.setSpan(new ForegroundColorSpan(textColour), 0, s.length(), 0);
+            searchItem.setTitle(s);
+        }
+
+        return super.onPrepareOptionsMenu(menu);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -135,6 +161,8 @@ public class PittersonActivity9 extends AppCompatActivity {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
             sharedPreferences.edit().putBoolean(getString(R.string.pref_mode_key), true).apply();
         }
+
+        invalidateOptionsMenu();
 
     }
 
