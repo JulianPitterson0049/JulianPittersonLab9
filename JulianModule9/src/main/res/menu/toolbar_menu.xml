@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/julOptions"
+        android:title="@string/options"
+        app:showAsAction="always">
+
+        <menu>
+            <item
+                android:id="@+id/julToggleMode"
+                android:icon="@drawable/ic_toggle"
+                android:title="@string/toggle_mode" />
+
+            <item
+                android:id="@+id/julSearch"
+                android:icon="@drawable/ic_search"
+                android:title="@string/search" />
+        </menu>
+
+    </item>
+
+</menu>
