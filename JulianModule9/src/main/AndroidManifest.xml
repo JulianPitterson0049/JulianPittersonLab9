@@ -13,7 +13,8 @@
         android:theme="@style/Theme.JulianLab9">
         <activity
             android:name=".PittersonActivity9"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.JulianLab9.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
