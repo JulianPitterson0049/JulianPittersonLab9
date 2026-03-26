@@ -1,4 +1,25 @@
 <!-- Julian Pitterson - N01680049 -->
 <resources>
     <string name="app_name">JulianLab9</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="nav_full_name">Julian Pitterson</string>
+    <string name="nav_email">n01680049@humber.ca</string>
+    <string name="nav_header_image_desc">Profile Image</string>
+    <string name="menu_jul">Julian</string>
+    <string name="menu_pit" translatable="false">Pitterson</string>
+    <string name="fragment_jul_title" translatable="false">Julian Fragment</string>
+    <string name="fragment_pit_title" translatable="false">Pitterson Fragment</string>
+    <string name="options">Options</string>
+    <string name="toggle_mode">Jul</string>
+    <string name="search">Pit</string>
+    <string name="search_hint">Enter search phrase</string>
+    <string name="search_button">Search</string>
+    <string name="pref_mode_key">night_mode</string>
+    <string name="hint_course_name">Enter course Name</string>
+    <string name="hint_course_desc">Enter Course Description</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_add">Add</string>
+    <string name="btn_delete">Delete</string>
+    <string name="toast_saved">Courses saved!</string>
+    <string name="toast_no_data">No data to delete</string>
 </resources>
