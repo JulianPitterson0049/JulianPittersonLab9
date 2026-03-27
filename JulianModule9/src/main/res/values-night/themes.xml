@@ -1,14 +1,10 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.JulianLab9" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+<resources>
+    <style name="Theme.JulianLab9" parent="Theme.MaterialComponents.DayNight.NoActionBar">
     </style>
 
     <style name="Theme.JulianLab9.Splash" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">@color/black</item>
+        <item name="windowSplashScreenBackground">@color/purple_500_night</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/splash_image</item>
-        <!-- drawable-night folder handles the different image automatically -->
         <item name="windowSplashScreenAnimationDuration">3000</item>
         <item name="postSplashScreenTheme">@style/Theme.JulianLab9</item>
     </style>
