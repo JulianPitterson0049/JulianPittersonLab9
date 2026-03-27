@@ -22,4 +22,22 @@
     <string name="btn_delete">Delete</string>
     <string name="toast_saved">Courses saved!</string>
     <string name="toast_no_data">No data to delete</string>
+    <string name="label_file_name">File Name</string>
+    <string name="label_file_contents">File Contents</string>
+    <string name="btn_persistent">Persistent File</string>
+    <string name="btn_create_file">Create File</string>
+    <string name="btn_delete_file">Delete File</string>
+    <string name="btn_write_file">Write File</string>
+    <string name="btn_read_file">Read File</string>
+    <string name="snack_file_name_missing">Julian Pitterson - File name missing</string>
+    <string name="toast_content_missing">Julian Pitterson - Content Missing</string>
+    <string name="btn_cache">Cache File</string>
+    <string name="error_reading_file">Error reading file</string>
+    <string name="file_written">File written</string>
+    <string name="file_not_found">File not found</string>
+    <string name="file_deleted">"File deleted: "</string>
+    <string name="file_created">"File created: "</string>
+    <string name="file_already_exists">File already exists</string>
+    <string name="dismiss_snack">Dismiss</string>
+
 </resources>
