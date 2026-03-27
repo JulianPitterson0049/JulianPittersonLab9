@@ -24,6 +24,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -156,17 +157,17 @@ public class PitFragment extends Fragment {
 
     private void createFile() {
         try {
+            // Enforce max 3 files BEFORE creating
+            if (fileNames.size() >= 3) {
+                String oldest = fileNames.remove(0);
+                File oldFile = isPersistent ?
+                        new File(requireContext().getFilesDir(), oldest) :
+                        new File(requireContext().getCacheDir(), oldest);
+                oldFile.delete();
+            }
+
             File file = getFile();
             if (file.createNewFile()) {
-                // Enforce max 3 files
-                if (fileNames.size() >= 3) {
-                    // Delete oldest file
-                    String oldest = fileNames.remove(0);
-                    File oldFile = isPersistent ?
-                            new File(requireContext().getFilesDir(), oldest) :
-                            new File(requireContext().getCacheDir(), oldest);
-                    oldFile.delete();
-                }
                 String fileName = pitFileNameInput.getText().toString().trim();
                 fileNames.add(fileName);
                 refreshFileList();
@@ -229,7 +230,7 @@ public class PitFragment extends Fragment {
         // Check persistent files
         File filesDir = requireContext().getFilesDir();
         if (filesDir.exists()) {
-            for (File f : filesDir.listFiles() != null ? filesDir.listFiles() : new File[0]) {
+            for (File f : Objects.requireNonNull(filesDir.listFiles() != null ? filesDir.listFiles() : new File[0])) {
                 if (fileNames.size() < 3) fileNames.add(f.getName());
             }
         }
